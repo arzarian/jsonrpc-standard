@@ -29,7 +29,7 @@ final class JsonRpcResponse implements JsonRpcInterface, Arrayable, Jsonable, \J
     public mixed $result;
     public ?JsonRpcError $error;
 
-    public function __construct(string|int|null $id = null, mixed $result = null, JsonRpcError $error = null)
+    public function __construct(string|int|null $id = null, mixed $result = null, ?JsonRpcError $error = null)
     {
         $this->id = $id ?? self::ID_EMPTY;
         $this->result = $result;

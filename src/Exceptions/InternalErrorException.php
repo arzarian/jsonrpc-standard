@@ -9,7 +9,7 @@ use Tochka\JsonRpc\Standard\Exceptions\Errors\InternalError;
  */
 class InternalErrorException extends JsonRpcException
 {
-    public function __construct(?string $message = null, InternalError $error = null, ?\Throwable $previous = null)
+    public function __construct(?string $message = null, ?InternalError $error = null, ?\Throwable $previous = null)
     {
         parent::__construct(self::CODE_INTERNAL_ERROR, $message, $error, $previous);
     }
